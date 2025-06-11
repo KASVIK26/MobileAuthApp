@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../../App';
+import GradientText from '../components/GradientText';
 
 type LoginScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
@@ -45,8 +46,8 @@ const LoginScreen: React.FC<Props> = ({navigation}) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <View style={styles.headerContainer}>
-          <Text style={styles.welcomeText}>Welcome Back,</Text>
-          <Text style={styles.gladText}>Glad to see you again</Text>
+          <GradientText style={styles.welcomeText}>Welcome Back,</GradientText>
+          <GradientText style={styles.gladText}>Glad to see you again</GradientText>
         </View>
 
         <View style={styles.inputContainer}>
@@ -96,13 +97,11 @@ const styles = StyleSheet.create({
   welcomeText: {
     fontSize: 28,
     fontWeight: '600',
-    color: '#FF6B35',
     marginBottom: 4,
   },
   gladText: {
     fontSize: 28,
     fontWeight: '600',
-    color: '#FFA500',
   },
   inputContainer: {
     marginBottom: 40,
